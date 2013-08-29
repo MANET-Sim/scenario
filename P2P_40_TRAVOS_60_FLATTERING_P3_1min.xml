@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<network id="TRAVOSP2PFLATTERING" timer="60000">
+  <agent quantity="40" speed="3" edge_length="60" promiscuous="Y" mobile="N" >
+    <model name="Travos" />
+    <role normal="Y" /> 
+    <behavior>
+         <param frequency="5" TTL="5" target="A0" protocol="3" />
+    </behavior>  
+  </agent>
+  
+  <agent quantity="60" speed="3" edge_length="60" promiscuous="Y" mobile="N" >
+    <model name="Travos" />
+    <role normal="N">
+      <collusive type="Flattering" />
+    </role> 
+    <behavior>
+         <param frequency="5" TTL="5" target="A0" protocol="3" />
+    </behavior>  
+  </agent>
+</network>

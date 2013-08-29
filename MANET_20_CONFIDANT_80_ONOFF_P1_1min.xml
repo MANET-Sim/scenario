@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<network id="TRIPMANETONOFF" timer="60000">
+  <agent quantity="20" speed="3" edge_length="25" promiscuous="Y" mobile="Y" >
+    <model name="Confidant" />
+    <role normal="Y" /> 
+    <behavior>
+         <param frequency="5" TTL="5" target="A0" protocol="1" />
+    </behavior>  
+  </agent>
+  
+  <agent quantity="80" speed="3" edge_length="25" promiscuous="Y" mobile="Y" >
+    <model name="Confidant" />
+    <role normal="N">
+      <oscillating period="1" />
+    </role> 
+    <behavior>
+         <param frequency="5" TTL="5" target="A10" protocol="1" />
+    </behavior>  
+  </agent>
+</network>
