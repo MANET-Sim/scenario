@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!ELEMENT network (agent)*>
+<!ATTLIST network
+    timer CDATA #REQUIRED 
+    id CDATA #REQUIRED
+  >
+
+<!ELEMENT agent (behavior|role|model)*>
+<!ATTLIST agent
+    mobile CDATA #REQUIRED
+    promiscuous CDATA #REQUIRED
+    edge_length CDATA #REQUIRED
+    speed CDATA #REQUIRED
+    quantity CDATA #REQUIRED
+  >
+
+<!ELEMENT model EMPTY>
+<!ATTLIST model
+    name CDATA #REQUIRED
+  >
+
+<!ELEMENT role (collusive|oscillating)*>
+<!ATTLIST role
+    normal CDATA #REQUIRED
+  >
+
+<!ELEMENT behavior (param)*>
+
+<!ELEMENT param EMPTY>
+<!ATTLIST param
+    protocol CDATA #REQUIRED
+    target CDATA #REQUIRED
+    TTL CDATA #REQUIRED
+    frequency CDATA #REQUIRED
+  >
+
+<!ELEMENT oscillating EMPTY>
+<!ATTLIST oscillating
+    period CDATA #REQUIRED
+  >
+
+<!ELEMENT collusive EMPTY>
+<!ATTLIST collusive
+    type CDATA #REQUIRED
+  >
